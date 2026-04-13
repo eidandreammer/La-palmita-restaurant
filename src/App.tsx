@@ -413,12 +413,6 @@ function App() {
             ))}
           </nav>
 
-          <a
-            className="header-cta"
-            href={restaurant.phoneHref}
-          >
-            Call {restaurant.phoneDisplay}
-          </a>
         </div>
       </header>
 
@@ -449,6 +443,12 @@ function App() {
                 href="#visit"
               >
                 Find the Restaurant
+              </a>
+              <a
+                className="button-link button-call hero-call-cta"
+                href={restaurant.phoneHref}
+              >
+                Call {restaurant.phoneDisplay}
               </a>
             </div>
 
