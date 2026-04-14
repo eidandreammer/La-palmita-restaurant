@@ -391,7 +391,11 @@ function App() {
             className="brand"
             href="#home"
           >
-            <span className="brand-mark">LP</span>
+            <img
+              alt={`${restaurant.name} logo`}
+              className="brand-mark"
+              src="/images/la-palmita-logo-round.png"
+            />
             <span className="brand-copy">
               <strong>{restaurant.name}</strong>
               <small>Hasbrouck Heights, New Jersey</small>
@@ -554,7 +558,7 @@ function App() {
               <h2>Every dish and beverage, organized by category.</h2>
             </div>
             <p className="section-copy">
-              Each menu card includes a photo, a clear description, and a visible price.
+              Each menu card shows the plate name, price, and a short description.
             </p>
           </div>
 
@@ -595,12 +599,6 @@ function App() {
                       className="menu-card"
                       key={item.id}
                     >
-                      <img
-                        alt={item.imageAlt}
-                        loading="lazy"
-                        src={item.image}
-                        style={{ objectPosition: item.imagePosition ?? 'center' }}
-                      />
                       <div className="menu-card-body">
                         <div className="item-row">
                           <h4>{item.title}</h4>

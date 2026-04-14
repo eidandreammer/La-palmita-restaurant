@@ -127,18 +127,12 @@ img {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 3.1rem;
+  display: block;
+  width: clamp(4rem, 9vw, 5.35rem);
   aspect-ratio: 1;
-  border: var(--panel-border);
-  background:
-    linear-gradient(135deg, var(--red) 0 36%, var(--sun) 36% 64%, var(--turquoise) 64% 100%);
-  color: var(--cream);
-  font-family: 'Limelight', serif;
-  font-size: 1.1rem;
-  line-height: 1;
-  box-shadow: 4px 4px 0 var(--ink);
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(3px 3px 0 var(--ink));
 }
 
 .brand-copy strong,
@@ -503,7 +497,7 @@ figure {
 }
 
 .featured-card img,
-.menu-card img {
+.featured-card img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-bottom: 3px solid var(--ink);
@@ -517,6 +511,11 @@ figure {
   display: grid;
   gap: 0.8rem;
   padding: 1rem;
+}
+
+.menu-card-body {
+  gap: 0.65rem;
+  padding: 1.2rem 1rem;
 }
 
 .item-row {
