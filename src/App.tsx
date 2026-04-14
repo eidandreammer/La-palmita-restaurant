@@ -452,11 +452,7 @@ function App() {
               </a>
             </div>
 
-            <ul className="hero-highlights">
-              <li>Fixed top navigation for faster browsing on every screen size.</li>
-              <li>Warm vintage textures, poster-like color blocks, and strong contrast.</li>
-              <li>Home page story, featured dishes, full menu, map, and contact details in one flow.</li>
-            </ul>
+            
           </article>
 
           <figure className="panel hero-banner">
@@ -497,15 +493,7 @@ function App() {
           </article>
 
           <div className="about-stack">
-            <figure className="panel about-photo">
-              <img
-                alt="Dining room at La Palmita Restaurant 2."
-                loading="lazy"
-                src="/images/interior-dining.jpg"
-              />
-              <figcaption>Warm indoor seating with a relaxed all-day dining feel.</figcaption>
-            </figure>
-
+            
             <article className="panel notes-panel">
               <p className="eyebrow">House Character</p>
               <h3>What defines the space</h3>
