@@ -188,6 +188,7 @@ img {
 }
 
 .nav-link {
+  min-width: 0;
   min-height: 3rem;
   padding: 0.62rem clamp(0.32rem, 0.85vw, 0.92rem);
   white-space: nowrap;
@@ -781,8 +782,58 @@ figure {
   }
 }
 
+@media (max-width: 899px) {
+  :root {
+    --nav-offset: 9.85rem;
+  }
+
+  .header-inner {
+    gap: 0.45rem;
+    padding: 0.45rem 0 0.55rem;
+  }
+
+  .brand {
+    gap: 0.65rem;
+  }
+
+  .brand-mark {
+    width: clamp(3.1rem, 11vw, 3.8rem);
+    filter: drop-shadow(2px 2px 0 var(--ink));
+  }
+
+  .brand-copy strong {
+    font-size: clamp(0.88rem, 3vw, 1.05rem);
+    letter-spacing: 0.06em;
+  }
+
+  .brand-copy small {
+    margin-top: 0.12rem;
+    font-size: clamp(0.54rem, 1.8vw, 0.66rem);
+    letter-spacing: 0.1em;
+  }
+
+  .site-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.32rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .nav-link {
+    min-height: 2.25rem;
+    padding: 0.42rem 0.28rem;
+    box-shadow: 3px 3px 0 var(--ink);
+    font-size: clamp(0.5rem, 1.85vw, 0.64rem);
+    letter-spacing: 0.06em;
+  }
+
+  .site-main {
+    padding-top: calc(var(--nav-offset) + 0.55rem);
+  }
+}
+
 @media (max-width: 639px) {
   :root {
+    --nav-offset: 10.15rem;
     --shell-gutter: 0.5rem;
   }
 
