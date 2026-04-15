@@ -24,7 +24,9 @@ const restaurant = {
   phoneDisplay: '(201) 288-5454',
   phoneHref: 'tel:+12012885454',
   mapsUrl:
-    'https://www.google.com/maps/place/La+Palmita+Restaurant+2/@40.869434,-74.070322,17z/',
+    'https://www.google.com/maps/place/La+Palmita+Restaurant+2/@40.8694325,-74.088776,15z/data=!3m1!4b1!4m6!3m5!1s0x89c2f9b1439db261:0xc78682eba6652bdf!8m2!3d40.869434!4d-74.070322!16s%2Fg%2F11f6l1jt3z?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
+  mapsEmbedUrl:
+    'https://www.google.com/maps?q=La+Palmita+Restaurant+2+438+Boulevard+Hasbrouck+Heights+NJ+07604&output=embed',
   serviceArea: 'Serving Hasbrouck Heights, Wood-Ridge, and nearby Bergen County neighborhoods.',
 }
 
@@ -502,9 +504,9 @@ function App() {
               <p className="eyebrow">House Character</p>
               <h3>What defines the space</h3>
               <ul className="notes-list">
-                <li>Bold color blocks inspired by retro Havana posters and storefronts.</li>
-                <li>Sharp-edged cards, images, and buttons with no rounded corners anywhere.</li>
-                <li>Food-first layouts supported by interior photography and aged-paper textures.</li>
+                <li>Warm neutral walls, dark wood furniture, and soft lighting create a cozy, welcoming Dominican dining atmosphere.</li>
+                <li>Clean-lined tables and structured seating keep the space simple, practical, and grounded in an everyday neighborhood feel.</li>
+                <li>Tropical wall art, open service views, and intimate table layouts bring in the relaxed, familiar character of a Caribbean comedor.</li>
               </ul>
             </article>
           </div>
@@ -530,12 +532,6 @@ function App() {
                 className="featured-card"
                 key={item.id}
               >
-                <img
-                  alt={item.imageAlt}
-                  loading="lazy"
-                  src={item.image}
-                  style={{ objectPosition: item.imagePosition ?? 'center' }}
-                />
                 <div className="featured-content">
                   <div className="item-row">
                     <h3>{item.title}</h3>
@@ -623,9 +619,16 @@ function App() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=La+Palmita+Restaurant+2+438+Boulevard+Hasbrouck+Heights+NJ+07604&output=embed"
+              src={restaurant.mapsEmbedUrl}
               title="Google map showing La Palmita Restaurant 2"
             />
+            <a
+              aria-label={`Open directions to ${restaurant.name} in Google Maps`}
+              className="map-panel-link"
+              href={restaurant.mapsUrl}
+            >
+              <span className="map-panel-badge">Open directions</span>
+            </a>
           </div>
 
           <article className="panel visit-panel">
@@ -640,7 +643,7 @@ function App() {
               <a
                 className="button-link button-primary"
                 href={restaurant.mapsUrl}
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Open in Google Maps
@@ -695,7 +698,7 @@ function App() {
               <a
                 className="text-link"
                 href={restaurant.mapsUrl}
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 Get directions
